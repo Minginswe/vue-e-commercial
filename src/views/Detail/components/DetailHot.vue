@@ -27,6 +27,7 @@ onMounted(() => getHotList())
       <p class="name ellipsis">{{ item.name }}</p>
       <p class="desc ellipsis">{{ item.desc }}</p>
       <p class="price">&yen;{{item.price}}</p>
+      <!-- 123 -->
     </RouterLink>
   </div>
 </template>
