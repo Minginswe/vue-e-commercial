@@ -27,6 +27,7 @@ const getGoodList = async () => {
   const res = await getSubCategoryAPI(reqData.value)
   console.log(res)
   goodList.value = res.result.items
+  console.log('bbb',res.result)
 }
 
 onMounted(() => getGoodList())
