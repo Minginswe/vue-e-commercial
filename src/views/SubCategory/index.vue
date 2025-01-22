@@ -40,7 +40,7 @@ const tabChange = () => {
 }
 
 //加载更多-无限加载
-const disabled = ref(false)
+let disabled = ref(false)
 const load = async () => {
   console.log('load被触发了')
   //获取下一页的数据
