@@ -1,5 +1,5 @@
 <script setup>
-import {useCategoryStore} from "@/stores/category.js"
+import {useCategoryStore} from "@/stores/categoryStore.js"
 import HeaderCart from './HeaderCart.vue'
 
 const categoryStore = useCategoryStore()
