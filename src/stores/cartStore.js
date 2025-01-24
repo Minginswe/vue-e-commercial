@@ -53,6 +53,10 @@ export const useCartStore = defineStore('cart', () => {
         }
     }
     
+    //清楚购物车
+    const clearCart = () => {
+        cartList.value = []
+    }
     //单选功能
     const singleCheck = (skuId, selected) => {
       //通过skuId找到要修改的那一项 然后把他的selected字段修改为传过来的selected
@@ -71,7 +75,7 @@ export const useCartStore = defineStore('cart', () => {
 
     //2.总价 所有项的count*price之和
     const allPrice = computed(() => cartList.value.reduce((a, c)=> a + c.count*c.price, 0)) 
-    
+     
     //3.已选择数量
     const selectedCount = computed(() => cartList.value.filter(item => item.selected).reduce((a, c)=> a+ c.count, 0))
     
@@ -89,6 +93,7 @@ export const useCartStore = defineStore('cart', () => {
         isAll,
         selectedCount,
         selectedPrice,
+        clearCart,
         allCheck,
         singleCheck,
         addCart,
